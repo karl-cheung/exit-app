@@ -1,0 +1,29 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "Repair WeChat with alipay return key problems",
+  "main": "./dist/back.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "back",
+    "wechat",
+    "alipay"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincheung/back.git"
+  },
+  "author": "vincheung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vincheung/back/issues"
+  },
+  "homepage": "https://github.com/vincheung/back#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  }
+}
