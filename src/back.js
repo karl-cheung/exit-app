@@ -13,7 +13,7 @@ window.addEventListener('popstate', function() {
   } else {
     sessionStorage.setItem('back', true)
   }
-}, false)
+})
 
 window.onpageshow = function () {
   setTimeout(function () {

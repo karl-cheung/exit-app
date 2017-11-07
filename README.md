@@ -23,7 +23,7 @@ window.addEventListener('popstate', function() { // 若使用 on 绑定事件在
 })
 
 window.onpageshow = function () {
-  setTimeout(function () { // 修复 ios 平台跳转后再返回触发 popstate 事件时已经设置 sessionStorage 存储,导致直接关闭页面
+  setTimeout(function () { // 修复 ios 客户端跳转后再返回触发 popstate 事件时已经设置 sessionStorage 存储，导致直接关闭页面
     sessionStorage.setItem('back', true)
   })
 }
@@ -33,7 +33,7 @@ window.onpagehide = function () {
 }
 ```
 
-## 微信ios客户端WKWebview内核点击返回时刷新页面
+## 微信ios客户端WKWebview内核点击返回后刷新页面
 
 ```javascript
 window.onpageshow = function (ev) {
@@ -52,3 +52,16 @@ window.onpageshow = function (ev) {
   }
 }
 ```
+
+## 使用
+
+直接引用`src/back.js`，或压缩版`dist/back.min.js`。
+
+## License
+
+The MIT License(http://opensource.org/licenses/MIT)
+
+
+## 贡献
+
+如果你有好的意见或建议，欢迎给我提 issue。

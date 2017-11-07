@@ -1,7 +1,7 @@
 {
   "name": "back",
   "version": "1.0.0",
-  "description": "Repair WeChat with alipay return key problems",
+  "description": "修复微信与支付宝返回键问题。",
   "main": "./dist/back.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,7 @@
     "url": "git+https://github.com/vincheung/back.git"
   },
   "author": "vincheung",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/vincheung/back/issues"
   },
