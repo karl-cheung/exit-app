@@ -1,6 +1,6 @@
 # back
 
-> 以下点击返回调用JSBridge接口时，微信客户端或支付宝客户端已注入相应JSAPI
+> 以下点击返回调用 JSBridge 接口时，微信客户端或支付宝客户端已注入相应 JSAPI。
 
 ## 微信或支付宝点击返回时关闭页面
 
@@ -33,7 +33,7 @@ window.onpagehide = function () {
 }
 ```
 
-## 微信ios客户端WKWebview内核点击返回后刷新页面
+## 微信 IOS 客户端 WKWebview 内核点击返回后刷新页面
 
 ```javascript
 window.onpageshow = function (ev) {
@@ -43,7 +43,7 @@ window.onpageshow = function (ev) {
 }
 ```
 
-> 抑或直接关闭微信页面
+> 抑或直接关闭微信页面。
 
 ```javascript
 window.onpageshow = function (ev) {
@@ -55,11 +55,11 @@ window.onpageshow = function (ev) {
 
 ## 使用
 
-直接引用`src/back.js`，或压缩版`dist/back.min.js`。
+直接引用 `src/back.js`，或压缩版 `dist/back.min.js`。
 
 ## License
 
-The MIT License(http://opensource.org/licenses/MIT)
+The MIT License.
 
 
 ## 贡献
