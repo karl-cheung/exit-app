@@ -1,67 +1,26 @@
-# back
+# exit-app
 
-> 以下点击返回调用 JSBridge 接口时，微信客户端或支付宝客户端已注入相应 JSAPI。
+> Wechat or alipay click on the return key to exit the application.
 
-## 微信或支付宝点击返回时关闭页面
+## Usage
 
-```javascript
-var u = window.navigator.userAgent
-var isWechat = u.indexOf('MicroMessenger') !== -1 // 微信
-var isAlipaly = u.indexOf('AlipayClient') !== -1 // 支付宝
+Install:
 
-window.history.pushState({}, 'title', '#')
-window.addEventListener('popstate', function() { // 若使用 on 绑定事件在某些机型不触发事件函数
-  if (sessionStorage.getItem('back')) {
-    if (isWechat) {
-      WeixinJSBridge.call('closeWindow')
-    } else if (isAlipaly) {
-      AlipayJSBridge.call('exitApp')
-    }
-  } else {
-    sessionStorage.setItem('back', true)
-  }
-})
-
-window.onpageshow = function () {
-  setTimeout(function () { // 修复 ios 客户端跳转后再返回触发 popstate 事件时已经设置 sessionStorage 存储，导致直接关闭页面
-    sessionStorage.setItem('back', true)
-  })
-}
-
-window.onpagehide = function () {
-  sessionStorage.removeItem('back')
-}
+```bash
+$ npm install exit-app
 ```
 
-## 微信 IOS 客户端 WKWebview 内核点击返回后刷新页面
+Import:
 
-```javascript
-window.onpageshow = function (ev) {
-  if (ev.persisted && WeixinJSBridge) {
-    window.location.reload()
-  }
-}
+```html
+<script src="exit-app.min.js"></script>
 ```
-
-> 抑或直接关闭微信页面。
-
-```javascript
-window.onpageshow = function (ev) {
-  if (ev.persisted && WeixinJSBridge) {
-    WeixinJSBridge.call('closeWindow')
-  }
-}
-```
-
-## 使用
-
-直接引用 `src/back.js`，或压缩版 `dist/back.min.js`。
 
 ## License
 
 The MIT License.
 
 
-## 贡献
+## Contribution
 
-如果你有好的意见或建议，欢迎给我提 issue。
+If you have good ideas or Suggestions, please talk to me about the issue.

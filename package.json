@@ -1,29 +1,32 @@
 {
-  "name": "back",
+  "name": "exit-app",
   "version": "1.0.0",
-  "description": "修复微信与支付宝返回键问题。",
-  "main": "./dist/back.min.js",
+  "description": "Wechat or alipay click on the return key to exit the application.",
+  "main": "exit-app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincheung/exit-app.git"
   },
   "keywords": [
-    "back",
+    "exit-app",
     "wechat",
     "alipay"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vincheung/back.git"
-  },
-  "author": "vincheung",
+  "author": "Zhang Yu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vincheung/back/issues"
+    "url": "https://github.com/vincheung/exit-app/issues"
   },
-  "homepage": "https://github.com/vincheung/back#readme",
+  "homepage": "https://github.com/vincheung/exit-app#readme",
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^1.2.3",
     "gulp-uglify": "^3.0.0"
   }
 }
