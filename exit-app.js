@@ -1,5 +1,5 @@
 /*
- * exit-app v1.0.0
+ * exit-app v1.0.1
  * (c) 2017 Zhang Yu
  * @license MIT
  */
@@ -47,7 +47,7 @@
     })
   })
 
-  window.addEventListener('onpagehide', function() {
+  window.addEventListener('pagehide', function() {
     window.sessionStorage.removeItem('$exitApp')
   })
 

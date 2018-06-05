@@ -1,6 +1,6 @@
 {
   "name": "exit-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wechat or alipay click on the return key to exit the application.",
   "main": "exit-app.js",
   "scripts": {
